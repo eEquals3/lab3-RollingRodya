@@ -2,25 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+
+.AllProg{
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    min-width: 100vw;
+    background: wheat;
+    color: black;
+}
+.Header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: black;
+}
+.PicContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 30%;
+}
+.Picture {
+
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    animation: in 2s linear 0s infinite reverse;
+    animation-play-state: paused;
+}
+.pic{
+    height: 100%;
+    width: 80%;
+    border-radius: 50%;
+    animation: in 4s linear 0s infinite normal;
+}
+.Picture:hover{
+    animation-play-state: running;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
+@keyframes in {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 
-body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-    ) rgb(var(--background-start-rgb));
+.ButtonMassive{
+    margin-top: 10%;
+    display: flex;
+    width: 100%;
+    min-height: calc(100% - 50% - 10%);
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
+.BtnExit{
+    margin: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    min-width: 30px;
+    min-height: 30px;
+    color: black;
+
+}
+.modal{
+    min-height: max-content;
+    min-width: 20vh;
+    width: 80%;
+    max-height: max-content;
+    border-radius: 1.5rem;
+    background: blanchedalmond;
+}
+.modal-box {
+    display: flex;
+    border-radius: 10%;
+
+}
+.Text{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 20%);
+    height: 100%;
+    margin: 5vh 3vw 3vh 3vw;
+    font-size: 2rem;
+    color: black;
+}
+.btn {
+    padding: 10px;
+    background: darkgray;
+    margin: 10px;
+    border: 10px groove rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition:transform 2s ease-in-out;
+}
+.btn:hover{
+    background: #757575;
+    transform: rotate(360deg);
+}
+
